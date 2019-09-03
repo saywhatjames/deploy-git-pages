@@ -3,7 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
 
 This Angular8 project is a simple application that serves as a demonstration for deploying a simple angular application to github pages.
-Check out https://saywhatjames.github.io/deploy-git-pages for the deployed application.
+It also has a nodejs server application that handles the API calls for sending emails through GMAIL SMTP using OAUTH2.0 for authentication.
+
+Check out https://saywhatjames.github.io/deploy-git-pages or https://angular-portfolio-67eed.firebaseapp.com/contact for the deployed application.
 
 For more information about github pages and its usage check out https://pages.github.com/
 ## Development server
