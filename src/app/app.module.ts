@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import {LightboxModule} from 'ngx-lightbox';
 
 // @ts-ignore
 @NgModule({
@@ -30,7 +31,8 @@ import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SlimLoadingBarModule
+    SlimLoadingBarModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

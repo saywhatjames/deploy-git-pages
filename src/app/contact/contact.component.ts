@@ -10,7 +10,6 @@ import {HttpService} from '../http.service';
 export class ContactComponent implements OnInit {
   angForm: FormGroup;
   submitted = false;
-
   constructor(private fb: FormBuilder, private http: HttpService) {
     this.createForm();
   }

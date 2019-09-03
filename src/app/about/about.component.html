@@ -1,61 +1,9 @@
 <h1 class="text-center"> About Us</h1>
-
 <div class="gallery container-fluid">
   <div class="row">
-    <div class="outer col-sm">
+    <div class="outer col-sm-12 col-md-4 col-lg-4 col-xl-4"  *ngFor="let thumbnail of thumbnails; let i = index">
       <div class="fg-item">
-        <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-
-      </div>
-    </div>
-    <div class="outer col-sm ">
-      <div class="fg-item">
-        <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-
-      </div>
-    </div>
-    <div class="outer col-sm">
-      <div class="fg-item">
-        <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="outer col-sm">
-      <div class="fg-item">
-         <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-
-
-      </div>
-    </div>
-    <div class="outer col-sm ">
-      <div class="fg-item">
-         <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-
-
-      </div>
-    </div>
-    <div class="outer col-sm">
-      <div class="fg-item">
-        <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="outer col-sm">
-      <div class="fg-item">
-         <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-      </div>
-    </div>
-    <div class="outer col-sm ">
-      <div class="fg-item">
-         <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
-      </div>
-    </div>
-    <div class="outer col-sm">
-      <div class="fg-item">
-        <img src="../../assets/basement-renovations-4-min.jpg" alt="renovation pics">
+        <img [src]="thumbnail.imageUrl" (click)="open(i)" alt="renovation pics">
       </div>
     </div>
   </div>

@@ -20,7 +20,11 @@ img {
 
 }
 
-img {
+.lb-outerContainer{
+  border-radius: 0px;
+}
+
+img, .fg-item  {
   width: 100%;
   height: 100%;
 
