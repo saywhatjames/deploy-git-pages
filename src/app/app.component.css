@@ -1,0 +1,11 @@
+.full-size{
+  width:100vw;
+  height:99.5vh;
+}
+
+
+.cover-container {
+  max-width: 42em;
+  justify-content: space-between;
+}
+

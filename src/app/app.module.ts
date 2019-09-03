@@ -10,7 +10,10 @@ import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,9 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    SlimLoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

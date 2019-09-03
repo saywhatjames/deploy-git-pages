@@ -5,10 +5,11 @@ import {HttpService} from '../http.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
   angForm: FormGroup;
+  submitted = false;
 
   constructor(private fb: FormBuilder, private http: HttpService) {
     this.createForm();
@@ -29,6 +30,7 @@ export class ContactComponent implements OnInit {
 
   onClickSubmit(formData) {
     console.log(formData);
+    this.submitted = true;
     this.http.post(formData);
   }
 

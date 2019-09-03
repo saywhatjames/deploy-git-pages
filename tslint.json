@@ -1,5 +1,12 @@
 {
   "extends": "tslint:recommended",
+  "linterOptions": {
+    "exclude": [
+      "bin",
+      "lib/*generated.js",
+      "server/**"
+    ]
+  },
   "rules": {
     "array-type": false,
     "arrow-parens": false,

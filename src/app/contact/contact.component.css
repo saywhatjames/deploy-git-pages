@@ -2,11 +2,14 @@
   padding: 20px 10px;
 }
 .contact-title{
-  font-size: xx-large;
-  font-weight: bold;
   text-align: center;
 }
 
 .button-container{
   padding-top: 30px;
+}
+
+.form-control{
+  background-clip: unset;
+  /*border-radius: unset;*/
 }

@@ -1,7 +1,5 @@
-<div class="form-container rounded">
-
-  <div class="contact-title"> Contact Us</div>
-
+<div *ngIf="!submitted" class="form-container rounded">
+  <h1 class="contact-title"> Contact Us</h1>
   <form [formGroup]="angForm" novalidate>
     <div class="form-group">
       <label for="fullName">Full Name</label>
@@ -48,8 +46,10 @@
                 id="message" rows="4"
                 formControlName="message"
                 placeholder="Your message here...">
-      </textarea>
+       </textarea>
     </div>
+
+
     <div
       *ngIf="angForm.controls['message'].invalid && (angForm.controls['message'].dirty || angForm.controls['message'].touched)"
       class="alert alert-danger">
@@ -59,16 +59,22 @@
     </div>
 
     <div class="button-container">
-      <button type="submit"
-              value="submit"
-              routerLink="/about"
+      <button type="button"
               [disabled]="angForm.pristine || angForm.invalid"
               (click)="onClickSubmit(angForm.value)"
-              class="btn btn-dark btn-lg btn-block rounded-lg">Submit
+              class="btn btn-secondary btn-lg btn-block rounded-lg">Submit
       </button>
     </div>
   </form>
 
 
+</div>
+
+<div *ngIf="submitted" class="inner cover text-center">
+  <h1 class="cover-heading">Thank You.</h1>
+  <p class="lead">Thank you for contacting us. We will be in touch with you shortly. Meanwhile checkout our previous projects.</p>
+  <p class="lead">
+    <a [routerLink]="'/about'" class="btn btn-lg btn-secondary">Portfolio.</a>
+  </p>
 </div>
 
