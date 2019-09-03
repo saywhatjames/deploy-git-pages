@@ -1,12 +1,20 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule.withRoutes([]),
+      ],
       declarations: [
         AppComponent
       ],
+      providers: [SlimLoadingBarService],
+      schemas: [ NO_ERRORS_SCHEMA ]
     }).compileComponents();
   }));
 
@@ -22,10 +30,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('deploy-git-pages');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('deploy-git-pages app is running!');
-  });
 });
