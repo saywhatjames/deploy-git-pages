@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ContactComponent } from './contact.component';
+import {ContactComponent} from './contact.component';
 import {NO_ERRORS_SCHEMA} from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
@@ -11,12 +11,12 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ],
+      declarations: [ContactComponent],
       imports: [ReactiveFormsModule,
-      HttpClientTestingModule],
-      schemas: [ NO_ERRORS_SCHEMA ]
+        HttpClientTestingModule],
+      schemas: [NO_ERRORS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -27,5 +27,35 @@ describe('ContactComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('name field validity', () => {
+    const name = component.angForm.controls['fullName'];
+    name.setValue('JAMES MAGPANTAY');
+    expect(name.valid).toBeTruthy();
+
+    name.setValue('');
+    expect(name.hasError('required')).toBeTruthy();
+
+
+
+  });
+
+  it('email field validity', () => {
+    const name = component.angForm.controls['email'];
+    expect(name.valid).toBeFalsy();
+
+    name.setValue('');
+    expect(name.hasError('required')).toBeTruthy();
+
+  });
+
+  it('message field validity', () => {
+    const name = component.angForm.controls['message'];
+    expect(name.valid).toBeFalsy();
+
+    name.setValue('');
+    expect(name.hasError('required')).toBeTruthy();
+
   });
 });
