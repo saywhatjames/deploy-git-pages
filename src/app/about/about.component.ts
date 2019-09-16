@@ -7,8 +7,8 @@ import {Lightbox} from 'ngx-lightbox';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  private album: any[] = [];
-  private thumbnails = [];
+   album: any[] = [];
+   thumbnails = [];
 
 
   constructor(private lightbox: Lightbox) {
@@ -26,7 +26,7 @@ export class AboutComponent implements OnInit {
 
   open(index: number): void {
     // open lightbox
-    this.lightbox.open(this.album, index);
+    this.lightbox.open(this.album, 0);
   }
 
   close(): void {
