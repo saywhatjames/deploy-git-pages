@@ -41,8 +41,8 @@ export class AboutComponent implements OnInit {
       const thumb = '../../assets/basement-renovations-4-min.jpg';
       const album = {
         src: imageUrl,
-        caption: caption,
-        thumb: thumb
+        cap: caption,
+        thumbnail: thumb
       };
 
       this.album.push(album);
